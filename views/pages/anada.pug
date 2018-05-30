@@ -1,0 +1,21 @@
+extends layout.pug
+block content
+    h2
+html
+  head
+    style.
+      div.polaroid {
+      width: 250px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      text-align: center;
+      }
+      div.container {
+      padding: 10px;
+      }
+  body
+    h2 Polaroid Images / Cards
+    p The box-shadow property can be used to create paper-like cards:
+    .polaroid
+      img(src='rock600x400.jpg', alt='Norway', style='width:100%')
+      .container
+        p Hardanger, Norway

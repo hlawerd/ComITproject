@@ -1,0 +1,634 @@
+
+.tabgroup {
+    Position: relative
+}
+
+.car-view1-wrapper {
+    padding-bottom: 16px;
+    background: url(../images/shadow1.png) center bottom no-repeat;
+    background-size: 100% 16px;
+    margin-bottom: 25px;
+}  
+
+.car-view1 {
+    border: 1px solid #eeeeee;
+    padding: 4px;
+}
+.car-view1 figure {
+    float: left;
+    margin-right: 25px;
+}
+
+.img-responsive, .thumbnail > img, .thumbnail a > img, .carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+img {
+    vertical-align: middle;
+}
+img {
+    border: 0;
+}
+/* @media (max-width: 767px) */
+.car-view1 .caption {
+    padding-right: 0;
+}
+.car-view1 .caption {
+    overflow: hidden;
+    padding-right: 20px;
+    padding-top: 10px;
+}
+.car-view1 .top-info {
+    padding-bottom: 0px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eeeeee;
+}
+.car-view1 .info1 {
+    float: left;
+    max-width: 60%;
+}
+.car-view1 .txt1 {
+    font-size: 20px;
+    line-height: 1;
+    color: #212121;
+    font-weight: 600;
+    position: relative;
+    padding-left: 15px;
+    margin-bottom: 1px;
+}
+.car-view1 .txt1:before {
+    content: '';
+    display: block;
+    width: 4px;
+    height: 100%;
+    background: #1c2931;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.car-view1 .txt2 {
+    padding-bottom: 10px;
+}
+.car-view1 .txt2 .txt {
+    font-size: 10px;
+    color: #464646;
+    display: inline-block;
+    padding-right: 15px;
+}
+.car-view1 .txt2 .stars {
+}
+.stars {
+    color: #e30000;
+    font-size: 13px;
+    display: inline-block;
+}
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.car-view1 .info2 {
+    float: right;
+}
+.car-view1 .txt3 {
+    background: #e30000;
+    min-width: 110px;
+    text-align: right;
+    font-size: 20px;
+    line-height: 1;
+    color: #fff;
+    padding: 8px 10px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.car-view1 .txt4 {
+    color: #666666;
+    padding-bottom: 15px;
+}
+.car-view1 .bot-info {
+}
+.car-view1 .info3 {
+    float: left;
+    max-width: 60%;
+}
+.car-view1 .txt5 {
+    padding-left: 30px;
+    position: relative;
+    font-size: 12px;
+    color: #464646;
+    font-weight: 600;
+    background: url(../img/speed-ic.png) 0 0 no-repeat;
+    margin-bottom: 0px;
+}
+.car-view1 .txt6 {
+    font-size: 11px;
+    color: #464646;
+}
+.car-view1 .info4 {
+    float: right;
+}
+.car-view1 .txt7 {
+    padding-top: 5px;
+    min-width: 110px;
+}
+.btn-default.btn3 {
+    display: block;
+    text-decoration: none;
+    color: #1c2931;
+    font-weight: 700;
+    font-family: 'Open Sans';
+    font-size: 10px;
+    line-height: 29px;
+    padding: 0 5px;
+    text-transform: uppercase;
+    letter-spacing: 0px;
+    background: #fff;
+    position: relative;
+    border: none;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0px;
+    border: 1px solid #1c2931;
+}
+.btn-default {
+    color: #333333;
+    background-color: #ffffff;
+    border-color: #cccccc;
+}
+a {
+    color: #666666;
+    text-decoration: underline;
+    outline: none;
+}
+.btn-default.btn3:after {
+    content: "\f105";
+    font-family: 'FontAwesome';
+    display: inline-block;
+    font-size: 12px;
+    margin-left: 8px;
+}
+
+/* index page */
+
+.pager_wrapper {
+    padding-top: 0px;
+    margin-bottom: 0px;
+}
+.pager {
+    display: inline-block;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    font-size: 10px;
+}
+.pager {
+    padding-left: 0;
+    margin: 20px 0;
+    list-style: none;
+    text-align: center;
+}
+ul, ol {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.pager .prev {
+}
+.pager li {
+    vertical-align: top;
+    margin: 0 2px;
+}
+.pager li {
+    display: inline;
+}
+.pager .prev > a {
+    float: left;
+    background: #1c2931;
+    color: #fff;
+    border: 1px solid #1c2931;
+    text-align: center;
+    text-transform: uppercase;
+}
+.pager li > a {
+    border: 1px solid #000;
+    padding: 0px 2px;
+    border-radius: 0px;
+    background: #fff;
+    color: #1c2931;
+    text-align: center;
+    min-width: 26px;
+    line-height: 24px;
+    text-decoration: none;
+}
+.pager li > a, .pager li > span {
+    display: inline-block;
+    padding: 5px 14px;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 15px;
+}
+a {
+    color: #666666;
+    text-decoration: underline;
+    outline: none;
+}
+a {
+    color: #337ab7;
+    text-decoration: none;
+}
+a {
+    background-color: transparent;
+}
+.pager .prev > a:before {
+    content: "\f104";
+    font-family: 'FontAwesome';
+    display: inline-block;
+    font-size: 12px;
+}
+.pager li {
+    vertical-align: top;
+    margin: 0 2px;
+}
+.pager li {
+    display: inline;
+}
+.pager li.active > a {
+    background: #1c2931;
+    color: #fff;
+    cursor: default;
+    text-decoration: none;
+    border-color: #1c2931;
+}
+.pager li > a {
+    border: 1px solid #000;
+    padding: 0px 2px;
+    border-radius: 0px;
+    background: #fff;
+    color: #1c2931;
+    text-align: center;
+    min-width: 26px;
+    line-height: 24px;
+    text-decoration: none;
+}
+.pager li > a, .pager li > span {
+    display: inline-block;
+    padding: 5px 14px;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 15px;
+}
+a {
+    color: #666666;
+    text-decoration: underline;
+    outline: none;
+}
+a {
+    color: #337ab7;
+    text-decoration: none;
+}
+a {
+    background-color: transparent;
+}
+.pager li > a {
+    border: 1px solid #000;
+    padding: 0px 2px;
+    border-radius: 0px;
+    background: #fff;
+    color: #1c2931;
+    text-align: center;
+    min-width: 26px;
+    line-height: 24px;
+    text-decoration: none;
+}
+.pager li > a, .pager li > span {
+    display: inline-block;
+    padding: 5px 14px;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 15px;
+}
+a {
+    color: #666666;
+    text-decoration: underline;
+    outline: none;
+}
+a {
+    color: #337ab7;
+    text-decoration: none;
+}
+a {
+    background-color: transparent;
+}
+.pager .dots {
+    height: 26px;
+    display: inline-block;
+    line-height: 36px;
+    font-size: 20px;
+}
+.pager li {
+    vertical-align: top;
+    margin: 0 2px;
+}
+.pager li {
+    display: inline;
+}
+.pager .next {
+}
+.pager li {
+    vertical-align: top;
+    margin: 0 2px;
+}
+.pager li {
+    display: inline;
+}
+.pager .next > a {
+    float: right;
+    background: #1c2931;
+    color: #fff;
+    border: 1px solid #1c2931;
+    text-align: center;
+    text-transform: uppercase;
+}
+.pager .next > a, .pager .next > span {
+    float: right;
+}
+.pager li > a {
+    border: 1px solid #000;
+    padding: 0px 2px;
+    border-radius: 0px;
+    background: #fff;
+    color: #1c2931;
+    text-align: center;
+    min-width: 26px;
+    line-height: 24px;
+    text-decoration: none;
+}
+.pager li > a, .pager li > span {
+    display: inline-block;
+    padding: 5px 14px;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 15px;
+}
+a {
+    color: #666666;
+    text-decoration: underline;
+    outline: none;
+}
+a {
+    color: #337ab7;
+    text-decoration: none;
+}
+a {
+    background-color: transparent;
+}
+.pager .next > a:after {
+    content: "\f105";
+    font-family: 'FontAwesome';
+    display: inline-block;
+    font-size: 12px;
+}
+/*  section of the buttom below the navbar */
+
+.top3-wrapper {
+    position: relative;
+    background: #f5f5f5;
+}
+.container2 {
+    position: relative;
+    min-width: 320px;
+}
+.top3 {
+    background: url(../images/shadow1.png) center top no-repeat;
+    background-size: 100% 16px;
+    padding: 20px 0;
+    text-align: right;
+}
+.tabs-wrapper {
+    display: inline-block;
+    padding-right: 40px;
+    vertical-align: top;
+}
+.tabs-wrapper .txt {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    color: #444444;
+    text-transform: uppercase;
+    padding-right: 15px;
+    vertical-align: top;
+    padding-top: 13px;
+}
+.tabs1-wrapper {
+    display: inline-block;
+    vertical-align: top;
+}
+.tabs1-wrapper .tabs {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    line-height: 0;
+    font-size: 0;
+    vertical-align: top;
+}
+ul, ol {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.tabs1-wrapper .tabs li {
+    display: inline-block;
+}
+.tabs1-wrapper .tabs li a:hover, .tabs1-wrapper .tabs li.active a {
+    color: #1c2931;
+}
+.tabs1-wrapper .tabs li a {
+    display: block;
+    background: #ffffff;
+    line-height: 20px;
+    padding: 11px 5px;
+    width: 50px;
+    text-align: center;
+    color: #999999;
+    margin-left: 1px;
+    font-size: 16px;
+}
+a {
+    color: #666666;
+    text-decoration: underline;
+    outline: none;
+}
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.tabs1-wrapper .tabs li a {
+    display: block;
+    background: #ffffff;
+    line-height: 20px;
+    padding: 11px 5px;
+    width: 50px;
+    text-align: center;
+    color: #999999;
+    margin-left: 1px;
+    font-size: 16px;
+}
+.sort-wrapper {
+    display: inline-block;
+    text-align: left;
+    vertical-align: top;
+}
+.sort-wrapper .txt {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    color: #444444;
+    text-transform: uppercase;
+    padding-right: 15px;
+    vertical-align: top;
+    padding-top: 13px;
+}
+.sort-wrapper .select1_wrapper {
+    width: 130px;
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: top;
+}
+.sort-wrapper .select1_wrapper label {
+    display: none;
+}
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.select1_inner {
+    position: relative;
+    background: #fff;
+    border: 1px solid #ebebeb;
+    height: 42px;
+    position: relative;
+}
+.select2-hidden-accessible {
+    border: 0 !important;
+    clip: rect(0 0 0 0) !important;
+    height: 1px !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important;
+}
+input, button, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+button, select {
+    text-transform: none;
+}
+button, input, optgroup, select, textarea {
+    color: inherit;
+    font: inherit;
+    margin: 0;
+}
+
+option {
+    font-weight: normal;
+    display: block;
+    white-space: pre;
+    min-height: 1.2em;
+    padding: 0px 2px 1px;
+}
+input, button, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+button, select {
+    text-transform: none;
+}
+button, input, optgroup, select, textarea {
+    color: inherit;
+    font: inherit;
+    margin: 0;
+}
+user agent stylesheet
+select {
+    -webkit-appearance: menulist;
+    box-sizing: border-box;
+    align-items: center;
+    white-space: pre;
+    -webkit-rtl-ordering: logical;
+    color: black;
+    background-color: white;
+    cursor: default;
+    border-width: 1px;
+    border-style: solid;
+    border-color: initial;
+    border-image: initial;
+}
+user agent stylesheet
+input, textarea, select, button {
+    text-rendering: auto;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+}
+user agent stylesheet
+input, textarea, select, button, meter, progress {
+    -webkit-writing-mode: horizontal-tb !important;
+}
+.sort-wrapper {
+    display: inline-block;
+    text-align: left;
+    vertical-align: top;
+}
+.top3 {
+    background: url(../images/shadow1.png) center top no-repeat;
+    background-size: 100% 16px;
+    padding: 20px 0;
+    text-align: right;
+}
+.select2-container {
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 0;
+    position: relative;
+    vertical-align: middle;
+}
+.select2-container--default .select2-selection--single {
+    background: none;
+    border-radius: 0;
+    border: none;
+    height: auto;
+}
+.select2-container--default .select2-selection--single {
+    background-color: #fff;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+}
+.select2-container .select2-selection--single {
+    box-sizing: border-box;
+    cursor: pointer;
+    display: block;
+    height: 28px;
+    user-select: none;
+    -webkit-user-select: none;
+}

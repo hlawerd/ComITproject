@@ -1,0 +1,15 @@
+extends layout.pug
+
+block content
+  h1= mainTitle
+  each product in productCollection
+    section.features
+      .container
+        div.product
+          h3= `${product.year} ${product.make} ${product.model}`
+          
+          .polaroid
+            img(src=imagesFolder + product.image)
+            .container
+              p= `Stock Number - ${product.stock} ${product.bodystyle}`
+              p.price Price for you: $ #{product.price}

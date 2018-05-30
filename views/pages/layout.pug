@@ -1,0 +1,85 @@
+include links-mixin
+
+doctype html
+html(lang="en")
+	head
+		meta(charset='UTF-8')
+		title=title
+		meta(name='viewport', content='width=device-width, initial-scale=1, user-scalable=no')
+		
+		+styles
+		//block link
+	body
+		
+		header.header
+			h1.logo Logo
+			nav
+				ul
+					li
+						a(href='/') Home
+					li
+						a(href='404') Buy
+					li
+						a(href='404') Sell
+					li
+						a(href='404') Products
+					li
+						a(href='aboutus') About Us
+					li
+						a(href='404') Contact
+		block index
+		block error404
+		block content
+		//block hours
+		// ########################## Begin of the FIRST footer  ##########################
+		footer.footer(style='background:#292c2f;color: #f5f3f3; box-sizing: border-box;')
+			// The content of your page would go here.
+			footer.footer-distributed
+				.footer-left
+					h3
+						span
+							a.logo2(href='index.html')
+								img(src='img/logo2.png', alt='')
+								h6(style=" width: 10px; font-family: 'Cabin Sketch', cursive; color: #4c8a19;") Malima's
+					p.footer-links
+						a(href='index.html') Home
+						| 								·
+						a(href='erro404.html') Buy
+						| 								·
+						a(href='erro404.html') Sell
+						| 								·
+						a(href='erro404.html') products
+						| 								·
+						a(href='erro404.html') About Us
+						| 								·
+						a(href='erro404.html') Contact
+					p.footer-company-name © 2018 Designed & Powered by Hugo Lima
+				.footer-center
+					div
+						i.fa.fa-map-marker
+						p
+							span 3 Donald Street
+							|  Winnipeg, MB Canada
+					div
+						i.fa.fa-phone
+						p +1 204 952-8774
+					div
+						i.fa.fa-envelope
+						p
+							a(href='mailto:hlawerd@gmail.com') support@malimacar.ca
+				.footer-right
+					p.footer-company-about
+						span About Malima's Car
+						| 								Trust 
+						strong Malima's Car
+						|  Vehicle Service Center for professional quality maintenance and repair services.
+					.footer-icons
+						a(href='#')
+							i.fa.fa-facebook
+						a(href='#')
+							i.fa.fa-twitter
+						a(href='#')
+							i.fa.fa-linkedin
+						a(href='#')
+							i.fa.fa-github
+		// ########################## End of the FIRST footer  ##########################

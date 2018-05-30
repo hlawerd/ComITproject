@@ -1,0 +1,71 @@
+.footer-developer {
+  height: 100px;
+  border-top: 1px solid rgba(0, 0, 0, 0.2); 
+  text-align: center;padding: 20px;
+}
+
+.footer-developer-left {
+  float: left; 
+  background-color: olive;
+}
+
+.footer-developer-left > div {
+  float: left; 
+  background-color: rgb(0, 128, 53);
+}
+
+.footer-developer-right {
+  float:right; 
+  background-color: olive;
+  text-align: right; 
+  width: 550px;
+}
+
+.footer-developer-right > div {
+  display: block; 
+  vertical-align: top; 
+  background-color: rgb(0, 128, 53);
+}
+
+.footer-ftdeveloper-ul1 {
+  display: inline-block; 
+  margin: 0; 
+  padding: 0; 
+  list-style: none;
+} 
+
+.footer-ftdeveloper-ul1 > li {
+  display: inline-block;
+}
+
+.footer-developer-right:last-child {
+  display: block; vertical-align: top;padding-top: 10px; background-color: rgb(128, 87, 0);
+}
+
+.footer-ftdeveloper-ul2 {
+  display: inline-block; 
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.logo2 {
+  color: #666666;
+  text-decoration: underline;
+  outline: none;
+  background-color: transparent;
+}
+
+.logo2 > img {
+  display: inline-block; 
+  padding-right: 20px;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.footer-designed {
+  float: right; 
+  background-color: rgb(128, 87, 0);
+  padding-top: 1.2em;
+} 

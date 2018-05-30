@@ -1,0 +1,375 @@
+extends layout.pug
+script
+  window.onload
+    function () => {
+      
+      const searching = document.querySelector('button');
+      
+      searching.addEventListener('click',function(){
+                console.log('You clicked an event listened element');
+        });
+
+      document.getElementsByClassName('searchForm').addEventListener('submit', function () {
+        var nome = this.querySelector('input[name=nome]'), nome = nome.value;
+
+        var email = this.querySelector('input[name=email]'), email = email.value;
+
+        var texto = 'Olá destinatário, \nMeu nome é '+ nome +' e meu email é '+ email;
+
+        this.querySelector('input[name=Body]').setAttribute('value', texto);
+    });
+  };
+block index
+    .highlight(style='background-image: url(img/highlight.jpg)')
+      .mySlides.fade
+        .carrosel-numbertext
+          span.carrosel-span FIND YOUR DREAM CAR
+          .carrosel-div1 A NEW ERA OF LUXURY
+          .carrosel-div2
+            | MODEL 2018 
+            span $122,111
+          .txt4
+            a(href='#') See detail
+        // <img src="img/highlight.jpg" style="background-size: cover;width:100%, background-repeat:no-repeat;background-attachment: fixed; background-position: center;" alt="img1.jpg">
+      .mySlides.fade
+        .carrosel-numbertext
+          span.carrosel-span FIND YOUR DREAM CAR
+          .carrosel-div1 novas informacoes AQUI
+          .carrosel-div2
+            | MODEL 2017 
+            span $65,000
+          .txt4
+            a(href='#') See detail
+        // <img src="img/slide03.jpg" style="width:100%" alt="img1.jpg">
+      a.prev(onclick='plusSlides(-1)', style='left: -10px;') ❮
+      a.next(onclick='plusSlides(1)') ❯
+    // ########################## end the Carrosel  ##########################
+    // ########################## Begin of the SEARCH section - 1 Section ##########################
+    section.search-section
+      // desenvolver a classe css
+      div
+        form(id="searchForm"action="products" method="GET")
+          .select1_wrapper
+            div
+              select.search-select-form(tabindex='-1', aria-hidden='true')
+                option(value='1') Any Make
+                option(value='2') Agfa Toreno
+                option(value='3') Astin Barton
+                option(value='4') Avdi
+                option(value='5') Bunesley
+                option(value='6') BNQ
+                option(value='7') Baratti
+              select.search-select-form.marge-lft(tabindex='-1', aria-hidden='true')
+                option(value='1') Any Model
+                option(value='2') Model 1
+                option(value='3') Model 2
+                option(value='4') Model 3
+                option(value='5') Model 4
+                option(value='6') Model 5
+                option(value='7') Model 6
+              select.search-select-form.marge-lft(tabindex='-1', aria-hidden='true')
+                option(value='1') Vehicle Status
+                option(value='2') Status 1
+                option(value='3') Status 2
+                option(value='4') Status 3
+                option(value='5') Status 4
+                option(value='6') Status 5
+                option(value='7') Status 6
+              select.search-select-form.marge-lft(tabindex='-1', aria-hidden='true')
+                option(value='1') Max Year
+                option(value='2') 2018
+                option(value='3') 2017
+                option(value='4') 2016
+                option(value='5') 2015
+                option(value='6') 2014
+                option(value='7') 2013
+              select.search-select-form.marge-lft(tabindex='-1', aria-hidden='true')
+                option(value='1') Min Year
+                option(value='2') 2018
+                option(value='3') 2017
+                option(value='4') 2016
+                option(value='5') 2015
+                option(value='6') 2014
+                option(value='7') 2013
+            a.more(href='#', style='margin-left: 3.5em;') MISSING MANUFACTURER?
+            a.more(href='#', style='margin-left: 7em;') MISSING MODEL?
+            a.more(href='#', style='margin-left: 12em;') E.G:  NEW, USED, CERTIFIED
+          div(style='display: flex; height: 52px;  ')
+            // border: 5px solid #a0ee0f;cd
+            .txt(style=' margin-left: 69px; font-size: 14px; font-weight: 700; color: gray; margin-top: 14px;') PRICE RANGE
+            //
+              <div class="slidecontainer" style="background-color: blueviolet;">
+              <input type="range" min="1.00" max="100.00" value="50.00" class="slider" id="myRange">
+              <p>Value: <span id="demo"></span></p> precisa rever esse passo aqui
+              </div>
+            div
+              input#amount(type='text', readonly='', placeholder='Minimun', style='margin-left: 45px; margin-top: 4px;')
+              input#amount2(type='text', readonly='', placeholder='Maximum')
+            div(style=' border: 5px;')
+              // background-color: rgb(139, 34, 34);
+              span.adv-serach(style='color: #406d80;	text-decoration: none;text-transform: uppercase;\
+              font-size: 10px; ')
+                a(style='text-decoration: none;margin-right: 15px;', href='#') ADVANCED SEARCH
+              button.btn(style='display: inline-flex; text-decoration: none;font-size: 14px;line-height: 40px;\
+              padding: 0 60px 0 25px;text-transform: uppercase;letter-spacing: 1px; background: #2e393f; position: relative; border: 1px solid #1c2931;') Submit
+    // ########################## Begin of the Hours section - 2 Section ##########################
+    section.features.feauture-bg
+      .container
+        h1.title-1 Malima's Car - HOURS OF OPERATION
+        hr
+        .feature.panel
+          div
+            h2 SALES
+          div
+            dl
+              dt.dt-hours.float-left monday
+              dd.dt-hours.float-right.pdlft32 9:00 AM - 9:00 PM
+              dt.dt-hours.float-left tuesday
+              dd.dt-hours.float-right 9:00 AM - 9:00 PM
+              dt.dt-hours.float-left wednesday
+              dd.dt-hours.float-right 9:00 AM - 6:00 PM
+              dt.dt-hours.float-left thursday
+              dd.dt-hours.float-right.pdlft50 9:00 AM - 6:00 PM
+              dt.dt-hours.float-left.pdlft15 friday
+              dd.dt-hours.float-right 9:00 AM - 6:00 PM
+              dt.dt-hours.float-left.pdlft15 saturday
+              dd.dt-hours.float-right.pdlft12 9:00 AM - 6:00 PM
+              dt.dt-hours.float-left sunday
+              dd.dt-hours.float-right.pdlft72 closed
+        .feature.panel
+          div
+            h2 SERVICE
+          div
+            dl
+              dt.dt-hours.float-left monday
+              dd.dt-hours.float-right.pdlft32 9:00 AM - 6:00 PM
+              dt.dt-hours.float-left tuesday
+              dd.dt-hours.float-right 9:00 AM - 6:00 PM
+              dt.dt-hours.float-left wednesday
+              dd.dt-hours.float-right 9:00 AM - 6:00 PM
+              dt.dt-hours.float-left thursday
+              dd.dt-hours.float-right.pdlft50 9:00 AM - 6:00 PM
+              dt.dt-hours.float-left.pdlft15 friday
+              dd.dt-hours.float-right 9:00 AM - 6:00 PM
+              dt.dt-hours.float-left.pdlft15 saturday
+              dd.dt-hours.float-right.pdlft12 9:00 AM - 2:00 PM
+              dt.dt-hours.float-left sunday
+              dd.dt-hours.float-right.pdlft72 closed
+        .feature.panel
+          div
+            h2 PARTS
+          div
+            dl
+              dt.dt-hours.float-left monday
+              dd.dt-hours.float-right.pdlft32 9:00 AM - 5:00 PM
+              dt.dt-hours.float-left tuesday
+              dd.dt-hours.float-right 9:00 AM - 5:00 PM
+              dt.dt-hours.float-left wednesday
+              dd.dt-hours.float-right 9:00 AM - 5:00 PM
+              dt.dt-hours.float-left thursday
+              dd.dt-hours.float-right.pdlft50 9:00 AM - 5:00 PM
+              dt.dt-hours.float-left.pdlft15 friday
+              dd.dt-hours.float-right 9:00 AM - 5:00 PM
+              dt.dt-hours.float-left.pdlft15 saturday
+              dd.dt-hours.float-right.pdlft12 9:00 AM - 2:00 PM
+              dt.dt-hours.float-left sunday
+              dd.dt-hours.float-right.pdlft72 closed
+    // ########################## End of the HOURS section - 2 Section ##########################
+    // ########################## Begin of the FEATURES Section  - 3 section ##########################
+    section.features
+      .container
+        h1.title-1
+          | The 
+          strong Malima's Car
+          |  Commitments
+        hr
+        .feature
+          h2 Lifetime Powertrain Coverage
+          p
+            img.left-img(src='img/4-wheel.png', alt='4-wheel Image')
+            | 			   We’ll cover the vehicle’s powertrain for life. Simply do the recommended maintenance with us and we’ll stand behind the
+            | 			   products that we sell.
+          a.btn(href='erro404.html')
+            span Read me Now
+        .feature
+          h2 Largest Inventory on the Prairies
+          p
+            img.left-img(src='img/icon-group-inventory.png', alt='Inventory Image')
+            | 				Driving Change Automotive Group provides you access to the largest selection of vehicles in all of the prairies.
+            | 				If we have what you want at another location, we’ll bring it in for you!
+          a.btn(href='erro404.html')
+            span Read me Now
+        .feature
+          h2 30-Day Exchange Policy
+          p
+            img.left-img(src='img/exchenge.png', alt='exchenge Image')
+            | 			   	If you suddenly find yourself pining for the other model you left behind at our dealership, you’re not out of luck,
+            | 			   	we allow for vehicle exchanges within 30 days of purchase (for Pre-owned vehicles only).
+          a.btn(href='erro404.html')
+            span Read me Now
+        .feature
+          h2 No Admin Fees
+          p
+            img.left-img(src='img/money.png', alt='Money Image')
+            | 				The paperwork should be our obligation, not yours. That’s why we’ll never surprise you with admin fees after you’ve
+            | 			   	already committed to purchase one of our vehicles.
+          a.btn(href='erro404.html')
+            span Read me Now
+        .feature
+          h2 Full Inspections & Reconditionning
+          p
+            img.left-img(src='img/clipboard.jpg', alt='Clipboard image')
+            | 			   Our used vehicles are fully inspected and reconditioned so you can drive away with the peace of mind knowing you’re
+            | 			   in a safe, reliable, and quality vehicle
+          a.btn(href='erro404.html')
+            span Read me Now
+        .feature
+          h2 Greater Used Vehicle Options
+          p
+            img.left-img(src='img/minivan.png', alt='Car Image')
+            | 				We don’t sell only Fords. In our Used Vehicle Inventory, we sell cars and trucks from nearly a dozen other
+            | 				leading manufacturers.
+          a.btn(href='erro404.html')
+            span Read me Now
+    // ##########################  End of the FEATURES Section  - 3 Section ##########################
+    // ########################## Begin of the MORE-LINKS Section - 4 Section ##########################
+    section.more-links
+      .container
+        h1.title-1 New Vehicle Department – Malima's Car Toyota
+        p
+          | Visit our Winnipeg 
+          a(href='erro404.html')
+            strong Malima's Car Showroom
+          |  to find specifications and pricing information for any of our new models, or browse through our 
+          a(href='erro404.html') New Vehicle Inventory
+          |  to see our current selection of Toyota vehicles. One of the reasons we have become the choice of Winnipeg
+          | 			Toyota dealers is because we provide our customers with the best selection of new vehicles.
+        .more-info
+          figure
+            img(src='img/2017-corolla-card.jpg', alt='Toyota corolla Image')
+          h1 2018 Toyota Corolla
+          strong
+            p
+              strong
+                | Reliability and excellent fuel economy have always come together with the Toyota Corolla, and the 2018 model is no different. Not only does the Corolla offer a highway fuel economy of 6.6L/100km (or approximately 42 miles per gallon), but the Corolla S (Sport) gives you a whole new look that highlights the fun-to-drive attitude of the model.
+            a.more-lnk(href='erro404.html') Learn more about the Corolla at our Winnipeg car dealership.
+        .more-info
+          figure
+            img(src='img/2016-camry-mcphillips-toyota-winnipeg-mb.jpg', alt='Toyota Camry Image')
+          h1 2018 Toyota Camry
+          p
+            strong
+              | The new 2018 Toyota Camry brings you a new generation of sport and luxury with an available torque of 267rpm with its 3.5L V6 engine while the available Camry hybrid provides you an astounding fuel economy of 4.9L/100km combined. Recently a Consumer Reports Top Pick for Family Sedan, the new Camry is more than just a great family vehicle.
+          a.more-lnk(href='erro404.html') Learn more about the new Camry online.
+    // ##########################  End of the MORE-LINKS Section - 4 Section   ##########################
+    // ########################## Begin of the OFFER Section - 5 Section  ##########################
+    section.offer
+      .container
+        img(src='img/serviceImage.jpg', alt="Service's Image ")
+        .text
+          h1 Malima's Car Vehicle Service Centre
+          p
+            | Trust 
+            strong Malima's Car
+            |  Vehicle Service Center for professional quality maintenance and repair services. 
+            | 					Our team of 
+            strong Malima's Car
+            |  Mechanics have received the latest industry training, and our lead technicians have many 
+            | 					years of experience working on vehicles. We also carry a wide selection of 
+            strong Malima's Car
+            |  parts and accessories
+            | 					that you can find at our Parts Department
+    // ##########################  End of the OFFER Section - 5 Section ##########################
+
+    // ########################## Begin footer by Developer  ##########################
+    //
+      <div class="footer-developer">
+      <div class="footer-developer-left">
+      <div>
+      <a href="index.html" class="logo2">
+      <img src="img/logo2.png" alt="">
+      </a>
+      </div>
+      <div class="footer-designed">
+      <p>© 2018 Designed &amp; Powered by Hugo Lima </p>
+      </div>
+      </div>
+      <div class="footer-developer-right">
+      <div>
+      <ul class="footer-ftdeveloper-ul1">
+      <li>
+      <a href="#"><span aria-hidden="true" class="ei social_facebook_square"></span></a>
+      </li>
+      <li>
+      <a href="#" class="fa fa-instagram"></a>
+      </li>
+      <li><!- ;margin: 0px 0 10px 10px;
+    //
+      <a href="#" class="fa fa-facebook"></a>
+      </li>
+      <li><!- ;margin: 0px 0 10px 10px;
+    //
+      <a href="#" class="fa fa-twitter"></a>
+      </li>
+      <li> <!-  style="display: inline-block;"
+    //
+      <a href="#" class="fa fa-linkedin"></a>
+      </li>
+      </ul>
+      </div>
+      <div>
+      <ul class="footer-ftdeveloper-ul2">
+      <li style="display: inline-block; margin: 0px 0 10px 10px;"><a href="#" style="display: block;	text-decoration: none;font-size: 12px;color: #999999;text-align: center;line-height: 20px;">Home</a></li>
+      <li style="display: inline-block; margin: 0px 0 10px 10px;"><a href="#" style="display: block;	text-decoration: none;font-size: 12px;color: #999999;text-align: center;line-height: 20px;">Produtos</a></li>
+      <li style="display: inline-block; margin: 0px 0 10px 10px;"><a href="#" style="display: block;	text-decoration: none;font-size: 12px;color: #999999;text-align: center;line-height: 20px;">Sobre nós</a></li>
+      <li style="display: inline-block; margin: 0px 0 10px 10px;"><a href="#" style="display: block;	text-decoration: none;font-size: 12px;color: #999999;text-align: center;line-height: 20px;">Contato</a></li>
+      </ul>
+      </div>
+      </div>
+      </div>
+    // ########################## End footer by Developer  ##########################
+    // ##########################   ##########################
+    script.
+      var slideIndex = 1; // I have a variable starting with 1
+      showSlides(slideIndex); // I have a function receiving sliceIndex
+      function plusSlides(n) {
+      showSlides(slideIndex += n);
+      }
+      function currentSlide(n) {
+      showSlides(slideIndex = n);
+      }
+      function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      /* var dots = document.getElementsByClassName("dot"); */
+      if (n > slides.length) {
+      slideIndex = 1
+      }  else if (n < 1) {
+      slideIndex = slides.length
+      }
+      for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none"; slides[i].style.backgroundImage = 'url(img/highlight.jpg)';//no idea try to rotation the photo
+      //window.alert(`teste`); // show something here what's happening
+      }
+      /* for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+      } */
+      slides[slideIndex-1].style.display = "block";
+      slides[slideIndex-1].style.backgroundImage = 'url(img/slide03.jpg)';// img/highlight.jpg
+      // dots[slideIndex-1].className += " active";
+      }
+    // THIS SCRIPT JUST CHECK THE PRICE RANGE
+    //
+      <script>
+      let min		= 0;
+      max		= 200,000,
+      step 	= 10,000,
+      values	= [ 0,00, 200,000];
+      let slider = document.getElementById("myRange");
+      let output = document.getElementById("demo");
+      output.innerHTML = parseFloat(slider.value);
+      slider.oninput = function() {
+      output.innerHTML = this.value;
+      }
+      </script>
+    // END - THIS SCRIPT JUST CHECK THE PRICE RANGE

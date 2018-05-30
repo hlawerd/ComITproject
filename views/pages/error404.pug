@@ -1,0 +1,17 @@
+extends layout.pug
+
+block error404
+    // ##########################   ##########################
+    section.offer.gradient(style='text-align: center;padding-top: 250px;')
+      .container
+        .text(style='width: 100%;text-transform: uppercase; text-align: center;  ')
+          h1(style='font-size: 4.5rem;')
+            | Error
+            span.errorcode(style='margin-left: 30px;') 404
+          p.output(style='text-align: left;')
+            | The page you are looking for might have been removed, had its name changed or is temporarily unavailable
+          p.output(style='text-align: left;margin-top: 10px;')
+            | Please try
+            a(href='index.html', style='margin-left: 30px;') Home
+          p.output(style='text-align: left;margin-top: 10px;') Good luck!
+    // ##########################   ##########################

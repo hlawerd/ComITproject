@@ -1,0 +1,41 @@
+doctype html
+html
+  head
+    title Events
+    script.
+      window.onload = function() {
+      Button.addEventListener('click', function()
+      {
+      let make    =   this.querySelector('select[name=make]'),
+      status  =   this.querySelector('select[name=status]'),
+      maxYear =   this.querySelector('select[name=maxYear]'),
+      nome    =   this.querySelector('input[name=nome]'),
+      email   =   this.querySelector('input[name=email]');
+      let
+      });
+      }
+  body
+    form#contatoForm(method='GET', action='submit', target='_blank')
+      select(name='make', tabindex='-1', aria-hidden='true')
+        option(value='1') Any Make
+        option(value='2') Agfa Toreno
+        option(value='3') Astin Barton
+        option(value='4') Avdi
+        option(value='5') Bunesley
+        option(value='6') BNQ
+        option(value='7') Baratti
+      select(name='status', tabindex='-1', aria-hidden='true')
+        option(value='1') Vehicle Status
+        option(value='2') New
+        option(value='3') Used
+      select(name='maxYear', tabindex='-1', aria-hidden='true')
+        option(value='1') Max Year
+        option(value='2') 2018
+        option(value='3') 2017
+        option(value='4') 2016
+        option(value='5') 2015
+        option(value='6') 2014
+        option(value='7') 2013
+      input.cells(type='text', name='nome', placeholder='nome')
+      input.cells(type='text', name='email', placeholder='email')
+      button#send(type='submit', value='click') Search...

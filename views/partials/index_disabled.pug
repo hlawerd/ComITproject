@@ -1,0 +1,336 @@
+doctype html
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		title Malima Car - Automotive Company
+		meta(name="viewport" content="width=device-width, initial-scale=1, user-scalable=no")
+		link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+		// by icon
+		link(href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,700" rel="stylesheet" type="text/css")
+		// by fonts
+		link(href="https://fonts.googleapis.com/css?family=Cabin+Sketch:400,700|Caveat:400,700|Fredericka+the+Great|Great+Vibes|Lemonada:300,400,600,700" rel="stylesheet")
+		//
+			font-family: 'Great Vibes', cursive;
+			font-family: 'Caveat', cursive;
+			font-family: 'Cabin Sketch', cursive;
+			font-family: 'Fredericka the Great', cursive;
+			font-family: 'Lemonada', cursive;
+		link(rel="stylesheet" href="css/style.css")
+		link(rel="stylesheet" href="css/mobile.css")
+		link(rel="stylesheet" href="css/style-icon.css")
+		link(rel="stylesheet" href="css/style-form.css")
+		link(rel="stylesheet" href="css/style-range.css")
+		link(rel="stylesheet" href="css/style-carosel.css")
+		link(rel="stylesheet" href="css/style-ftdeveloper.css")
+		script.
+			window.onload = function() {
+			/* <div class="highlight" style="background-image:url(img/highlight.jpg); background-repeat:no-repeat;background-attachment: fixed; background-position: center;" */
+			const carroselImg = document.querySelector("div.highlight").style.backgroundImage = 'url(img/slide04.jpg)';
+			}
+	body
+		// ########################## Begin header nav  ##########################
+		header.header
+			h1.logo Logo
+			nav
+				ul
+					li
+						a(href="index.html") Home
+					li
+						a(href="#") Buy
+					li
+						a(href="#") Sell
+					li
+						a(href="#") Produtos
+					li
+						a(href="#") Sobre nós
+					li
+						a(href="#") Contato
+		// ########################## End Header nav  ##########################
+
+		// ########################## aqui precisa de uma corrosel   ##########################
+		.highlight(style="background-image:url();")
+			.mySlides.fade
+				.carrosel-numbertext
+					span.carrosel-span FIND YOUR DREAM CAR
+					.carrosel-div1 A NEW ERA OF LUXURY
+					.carrosel-div2
+						| MODEL 2018 
+						span $122,111
+					.txt4
+						a(href="#") See detail
+				// <img src="img/highlight.jpg" style="width:100%" alt="img1.jpg">
+			.mySlides.fade
+				.carrosel-numbertext
+					span.carrosel-span FIND YOUR DREAM CAR
+					.carrosel-div1 novas informacoes AQUI
+					.carrosel-div2
+						| MODEL 2017 
+						span $65,000
+					.txt4
+						a(href="#") See detail
+				// <img src="img/slide03.jpg" style="width:100%" alt="img1.jpg">
+			a.prev(onclick="plusSlides(-1)" style="left: -10px;") ❮
+			a.next(onclick="plusSlides(1)") ❯
+		// ########################## end the Carrosel  ##########################
+        
+		// ########################## begin of the search section  ##########################
+		section.search-section
+			// desenvolver a classe css
+			div
+				form(action="list.html")
+					.select1_wrapper
+						div
+							select.search-select-form(tabindex="-1" aria-hidden="true")
+								option(value="1") Any Make
+								option(value="2") Agfa Toreno
+								option(value="3") Astin Barton
+								option(value="4") Avdi
+								option(value="5") Bunesley
+								option(value="6") BNQ
+								option(value="7") Baratti
+							select.search-select-form.marge-lft(tabindex="-1" aria-hidden="true")
+								option(value="1") Any Model
+								option(value="2") Model 1
+								option(value="3") Model 2
+								option(value="4") Model 3
+								option(value="5") Model 4
+								option(value="6") Model 5
+								option(value="7") Model 6
+							select.search-select-form.marge-lft(tabindex="-1" aria-hidden="true")
+								option(value="1") Vehicle Status
+								option(value="2") Status 1
+								option(value="3") Status 2
+								option(value="4") Status 3
+								option(value="5") Status 4
+								option(value="6") Status 5
+								option(value="7") Status 6
+							select.search-select-form.marge-lft(tabindex="-1" aria-hidden="true")
+								option(value="1") Max Year
+								option(value="2") 2018
+								option(value="3") 2017
+								option(value="4") 2016
+								option(value="5") 2015
+								option(value="6") 2014
+								option(value="7") 2013
+							select.search-select-form.marge-lft(tabindex="-1" aria-hidden="true")
+								option(value="1") Min Year
+								option(value="2") 2018
+								option(value="3") 2017
+								option(value="4") 2016
+								option(value="5") 2015
+								option(value="6") 2014
+								option(value="7") 2013
+						a.more(href="#" style="margin-left: 3.5em;") MISSING MANUFACTURER?
+						a.more(href="#" style="margin-left: 7em;") MISSING MODEL?
+						a.more(href="#" style="margin-left: 12em;") E.G:  NEW, USED, CERTIFIED
+					div(style="display: flex; border: 5px solid #a0ee0f; height: 52px;  ")
+						.txt(style=" margin-left: 69px; font-size: 14px; font-weight: 700; color: gray; margin-top: 14px;") PRICE RANGE
+						.slidecontainer(style="background-color: blueviolet;")
+							input#myRange.slider(type="range" min="1.00" max="100.00" value="50.00")
+							p
+								| Value: 
+								span#demo
+						div
+							input#amount(type="text" readonly="" placeholder="Minimun" style="margin-left: 45px; margin-top: 4px;")
+							input#amount2(type="text" readonly="" placeholder="Maximum")
+						div(style="background-color: rgb(139, 34, 34); border: 5px;")
+							span.adv-serach(style="color: #406d80;	text-decoration: none;text-transform: uppercase;\
+							font-size: 10px; ")
+								a(style="text-decoration: none;margin-right: 5px;" href="#") ADVANCED SEARCH
+							button(type="submit" style="display: inline-flex; text-decoration: none;font-size: 14px;line-height: 42px;\
+							padding: 0 60px 0 25px;text-transform: uppercase;letter-spacing: 1px; background: #2e393f; position: relative; border: 1px solid #1c2931;") Submit
+			section.features(style="top: -90%;")
+				.container
+					h1.title-1 Laborum rem facilis maximie nostrum
+					p
+						| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, rem, facilis, maxime nostrum asperiores molestiae eum dolor voluptatum ab officiis distinctio.
+					.feature
+						h2 Crafted with love
+						p
+							| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, debitis, at alias fugiat optio aliquam accusamus accusantium enim soluta aspernatur vero sed aperiam quasi porro cum nihil adipisci aut mollitia.
+						a.btn(href="#") Leia agora
+					.feature
+						h2 Iure debits fugiat optio aliquam
+						p
+							| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, debitis, at alias fugiat optio aliquam accusamus accusantium enim soluta aspernatur vero sed aperiam quasi porro cum nihil adipisci aut mollitia.
+						a.btn(href="#") Saiba mais
+		// ##########################   ##########################
+		section.features
+			.container
+				h1.title-1 Laborum rem facilis maximie nostrum
+				p
+					| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, rem, facilis, maxime nostrum asperiores molestiae eum dolor voluptatum ab officiis distinctio.
+				.feature
+					h2 Crafted with love
+					p
+						| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, debitis, at alias fugiat optio aliquam accusamus accusantium enim soluta aspernatur vero sed aperiam quasi porro cum nihil adipisci aut mollitia.
+					a.btn(href="#") Leia agora
+				.feature
+					h2 Iure debits fugiat optio aliquam
+					p
+						| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, debitis, at alias fugiat optio aliquam accusamus accusantium enim soluta aspernatur vero sed aperiam quasi porro cum nihil adipisci aut mollitia.
+					a.btn(href="#") Saiba mais
+				.feature
+					h2 Crafted with love
+					p
+						| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, debitis, at alias fugiat optio aliquam accusamus accusantium enim soluta aspernatur vero sed aperiam quasi porro cum nihil adipisci aut mollitia.
+					a.btn(href="#") Mais outro
+				.feature
+					h2 Lorem ipsum dolor
+					p
+						| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, debitis, at alias fugiat optio aliquam accusamus accusantium enim soluta aspernatur vero sed aperiam quasi porro cum nihil adipisci aut mollitia.
+					a.btn(href="#") Compre agora
+				.feature
+					h2 Iure debits fugiat optio aliquam
+					p
+						| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, exercitationem, odio, hic, dolores architecto magnam recusandae similique laborum alias tempora dolorum facere quasi at sint asperiores numquam aut distinctio ipsum.
+					a.btn(href="#") Saiba mais
+				.feature
+					h2 Aperiam quasi porro
+					p
+						| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, debitis, at alias fugiat optio aliquam accusamus accusantium enim soluta aspernatur vero sed aperiam quasi porro cum nihil adipisci aut mollitia.
+					a.btn(href="#") Mais detalhes
+		// ##########################   ##########################
+
+		// ##########################   ##########################
+		section.more-links
+			.container
+				h1.title-1 Laborum rem facilis maximie nostrum
+				p
+					| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, rem, facilis, maxime nostrum asperiores molestiae eum dolor voluptatum ab officiis distinctio.
+				.more-info
+					figure
+						img(src="img/img4.jpg" alt="")
+					h1 Only Use what is necessary
+					p
+						| Consectetur adipisicing elit. Asperiores dolore quisquam eum ducimus officiis odio ipsum modi.
+					a.more-lnk(href="#") Um link de chamada para a página
+				.more-info
+					figure
+						img(src="img/img5.jpg" alt="")
+					h1 Laborum rem facilis maximie nostrum
+					p
+						| Consectetur adipisicing elit. Asperiores dolore quisquam eum ducimus officiis odio ipsum modi.
+					a.more-lnk(href="#") Um link de chamada para a página
+		// ##########################   ##########################
+
+		// ##########################   ##########################
+		section.offer
+			.container
+				img(src="img/img6.jpg" alt="")
+				.text
+					h1 Laborum rem facilis maximie nostrum
+					p
+						| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, animi rerum cupiditate tenetur quod illo facere molestias explicabo cumque dicta magni est qui distinctio esse officiis inventore voluptas harum quos.
+		// ##########################   ##########################
+
+		// ########################## Begin footer  ##########################
+		footer.footer(style="background: #333333;color: #f5f3f3; box-sizing: border-box;")
+			// <p><a href="http://tableless.com.br">Tableless.com.br</a><br>Footer do site onde vai o Copyright e as outras coisas.</p>
+			div(style="float: left;  width: 23%; margin-right: 0.3em;")
+				h3 LATEST NEWS
+				p(style="text-align: justify; ")
+					| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce congue maximus magna scelerisque molestie. Donec ultricies commodo ex et ullamcorper. Fusce maximus non enim in mollis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque nec tempus lacus, nec ultrices magna. Donec sit amet ante arcu. Etiam tincidunt porttitor tellus, ac commodo leo ultricies sed. Pellentesque ut ex non tortor sodales commodo. Integer metus nisl, volutpat vitae dui vitae, gravida dapibus nisl. Fusce in ipsum velit. Vivamus elementum tellus est, eu luctus ex eleifend ut. Nullam fringilla purus risus, ac tristique felis fringilla vitae. Fusce faucibus ligula id elit hendrerit, non sollicitudin ante aliquam. Nulla dictum diam a mollis tristique. Phasellus a rutrum ipsum. Curabitur sagittis nunc nunc, ut fermentum nibh blandit a.
+					| Nam pharetra arcu at risus sagittis tempor. Maecenas in mattis orci, pretium sodales tortor. Phasellus finibus sapien nunc.
+					| Praesent vel posuere libero, vel sollicitudin erat.
+			div(style="float: left;  width: 23%; margin-right: 0.3em;")
+				h3 LATEST AUTOS
+				p(style="text-align: justify;")
+					| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce congue maximus magna scelerisque molestie. Donec ultricies commodo ex et ullamcorper. Fusce maximus non enim in mollis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque nec tempus lacus, nec ultrices magna. Donec sit amet ante arcu. Etiam tincidunt porttitor tellus, ac commodo leo ultricies sed. Pellentesque ut ex non tortor sodales commodo. Integer metus nisl, volutpat vitae dui vitae, gravida dapibus nisl. Fusce in ipsum velit. Vivamus elementum tellus est, eu luctus ex eleifend ut. Nullam fringilla purus risus, ac tristique felis fringilla vitae. Fusce faucibus ligula id elit hendrerit, non sollicitudin ante aliquam. Nulla dictum diam a mollis tristique. Phasellus a rutrum ipsum. Curabitur sagittis nunc nunc, ut fermentum nibh blandit a.
+					| Nam pharetra arcu at risus sagittis tempor. Maecenas in mattis orci, pretium sodales tortor. Phasellus finibus sapien nunc.
+					| Praesent vel posuere libero, vel sollicitudin erat.
+			div(style="float: right; width: 23%; margin-right: 0.3em;")
+				h3 FROM TWITTER
+				p(style="text-align: justify;")
+					| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce congue maximus magna scelerisque molestie. Donec ultricies commodo ex et ullamcorper. Fusce maximus non enim in mollis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque nec tempus lacus, nec ultrices magna. Donec sit amet ante arcu. Etiam tincidunt porttitor tellus, ac commodo leo ultricies sed. Pellentesque ut ex non tortor sodales commodo. Integer metus nisl, volutpat vitae dui vitae, gravida dapibus nisl. Fusce in ipsum velit. Vivamus elementum tellus est, eu luctus ex eleifend ut. Nullam fringilla purus risus, ac tristique felis fringilla vitae. Fusce faucibus ligula id elit hendrerit, non sollicitudin ante aliquam. Nulla dictum diam a mollis tristique. Phasellus a rutrum ipsum. Curabitur sagittis nunc nunc, ut fermentum nibh blandit a.
+					| Nam pharetra arcu at risus sagittis tempor. Maecenas in mattis orci, pretium sodales tortor. Phasellus finibus sapien nunc.
+					| Praesent vel posuere libero, vel sollicitudin erat.
+			div(style="float: right; width: 23%; margin-right: 0.3em;")
+				// background-color: rgb(160, 151, 211);
+				h3 CONTACT US
+				p(style="text-align: justify;")
+					| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce congue maximus magna scelerisque molestie. Donec ultricies commodo ex et ullamcorper. Fusce maximus non enim in mollis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque nec tempus lacus, nec ultrices magna. Donec sit amet ante arcu. Etiam tincidunt porttitor tellus, ac commodo leo ultricies sed. Pellentesque ut ex non tortor sodales commodo. Integer metus nisl, volutpat vitae dui vitae, gravida dapibus nisl. Fusce in ipsum velit. Vivamus elementum tellus est, eu luctus ex eleifend ut. Nullam fringilla purus risus, ac tristique felis fringilla vitae. Fusce faucibus ligula id elit hendrerit, non sollicitudin ante aliquam. Nulla dictum diam a mollis tristique. Phasellus a rutrum ipsum. Curabitur sagittis nunc nunc, ut fermentum nibh blandit a.
+					| Nam pharetra arcu at risus sagittis tempor. Maecenas in mattis orci, pretium sodales tortor. Phasellus finibus sapien nunc.
+					| Praesent vel posuere libero, vel sollicitudin erat.
+		// ########################## End footer  ##########################
+
+		// ########################## Begin footer by Developer  ##########################
+		.footer-developer
+			.footer-developer-left
+				div
+					a.logo2(href="index.html")
+						img(src="img/logo2.png" alt="")
+				.footer-designed
+					p © 2018 Designed & Powered by Hugo Lima 
+			.footer-developer-right
+				div
+					ul.footer-ftdeveloper-ul1
+						li
+							a(href="#")
+								span.ei.social_facebook_square(aria-hidden="true")
+						li
+							a.fa.fa-instagram(href="#")
+						li
+							// ;margin: 0px 0 10px 10px;
+							a.fa.fa-facebook(href="#")
+						li
+							// ;margin: 0px 0 10px 10px;
+							a.fa.fa-twitter(href="#")
+						li
+							// style="display: inline-block;"
+							a.fa.fa-linkedin(href="#")
+				div
+					ul.footer-ftdeveloper-ul2
+						li(style="display: inline-block; margin: 0px 0 10px 10px;")
+							a(href="#" style="display: block;	text-decoration: none;font-size: 12px;color: #999999;text-align: center;line-height: 20px;") Home
+						li(style="display: inline-block; margin: 0px 0 10px 10px;")
+							a(href="#" style="display: block;	text-decoration: none;font-size: 12px;color: #999999;text-align: center;line-height: 20px;") Produtos
+						li(style="display: inline-block; margin: 0px 0 10px 10px;")
+							a(href="#" style="display: block;	text-decoration: none;font-size: 12px;color: #999999;text-align: center;line-height: 20px;") Sobre nós
+						li(style="display: inline-block; margin: 0px 0 10px 10px;")
+							a(href="#" style="display: block;	text-decoration: none;font-size: 12px;color: #999999;text-align: center;line-height: 20px;") Contato
+		// ########################## End footer by Developer  ##########################
+
+		// ##########################   ##########################
+		script.
+			var slideIndex = 1; // I have a variable starting with 1
+			showSlides(slideIndex); // I have a function receiving sliceIndex
+			function plusSlides(n) {
+			showSlides(slideIndex += n);
+			}
+			function currentSlide(n) {
+			showSlides(slideIndex = n);
+			}
+			function showSlides(n) {
+			var i;
+			var slides = document.getElementsByClassName("mySlides");
+			/* var dots = document.getElementsByClassName("dot"); */
+			if (n > slides.length) {
+			slideIndex = 1
+			}  else if (n < 1) {
+			slideIndex = slides.length
+			}
+			for (i = 0; i < slides.length; i++) {
+			slides[i].style.display = "none"; slides[i].style.backgroundImage = 'url(img/highlight.jpg)';//no idea try to rotation the photo
+			window.alert(`teste`); // show something here what's happening
+			}
+			/* for (i = 0; i < dots.length; i++) {
+			dots[i].className = dots[i].className.replace(" active", "");
+			} */
+			slides[slideIndex-1].style.display = "block";
+			slides[slideIndex-1].style.backgroundImage = 'url(img/slide03.jpg)';// img/highlight.jpg
+			// dots[slideIndex-1].className += " active";
+			}
+		// THIS SCRIPT JUST CHECK THE PRICE RANGE
+		script.
+			let min		= 0;
+			max		= 200,000,
+			step 	= 10,000,
+			values	= [ 0,00, 200,000];
+			let slider = document.getElementById("myRange");
+			let output = document.getElementById("demo");
+			output.innerHTML = parseFloat(slider.value);
+			slider.oninput = function() {
+			output.innerHTML = this.value;
+			}
+		// END - THIS SCRIPT JUST CHECK THE PRICE RANGE
